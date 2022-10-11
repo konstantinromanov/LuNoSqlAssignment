@@ -1,23 +1,24 @@
 ﻿using LuNoSqlAssignment.Models;
+using LuNoSqlAssignment.Properties;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Distributed;
+using System.Collections;
 using System.Diagnostics;
+using System.Globalization;
+using System.Resources;
 
 namespace LuNoSqlAssignment.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        private IDistributedCache _cache;
         private readonly IConfiguration? _configuration;
         private readonly Task<RedisConnection> _redisConnectionFactory;
         private RedisConnection? _redisConnection;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, IDistributedCache cache, Task<RedisConnection> redisConnectionFactory)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, Task<RedisConnection> redisConnectionFactory)
         {
             _logger = logger;
-            _cache = cache;
+            _configuration = configuration;
             _redisConnectionFactory = redisConnectionFactory;
         }
 
@@ -67,6 +68,30 @@ namespace LuNoSqlAssignment.Controllers
             ViewBag.command5 = $"SET {key}";
             ViewBag.command5Result = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringSetAsync(key, value))).ToString();
 
+            var mySetCommand1 = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringSetAsync("name", "Vova"))).ToString();
+            var myGetCommand1 = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync("name"))).ToString();
+            //var myGetCommand1 = (await _redisConnection.BasicRetryAsync(async (db) => await db.inse
+
+            var myNames = ResourcesNames.Jonathon;
+
+
+            List<Person> persons = new List<Person>();
+            
+
+            ResourceSet? resourceSet = ResourcesNames.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            if (resourceSet != null)
+            {
+                foreach (DictionaryEntry item in resourceSet)
+                {
+                    persons.Add(new Person { Name = (string?)item.Key, Surname = (string?)item.Value });
+
+
+                }
+            }
+           
+           
+         
             return View();
         }
     }

@@ -1,7 +1,4 @@
 using LuNoSqlAssignment;
-using Redis.OM;
-
-
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager? configuration = builder.Configuration;
@@ -12,15 +9,6 @@ builder.Services.AddStackExchangeRedisCache(options =>
     options.InstanceName = "RedisDemo_";
 });
 
-//    .AddUserSecrets<Program>();
-//builder.Services.AddStackExchangeRedisCache
-//builder.Services.AddStackExchangeRedisCache(options => { options.Configuration = configuration["RedisCacheUrl"]; });
-
-//builder.Services.AddStackExchangeRedisCache(async x => await RedisConnection.InitializeAsync(connectionString: configuration["CacheConnection"].ToString()));
-
-//var configuration = configurationBuilder.Build();
-
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: builder.Configuration["CacheConnection"].ToString()));
 
@@ -35,10 +23,6 @@ if (!app.Environment.IsDevelopment())
 }
 
 // Register services here 
-//builder.Services.AddSingleton(new RedisConnectionProvider(builder.Configuration["REDIS_CONNECTION_STRING"]));
-
-
-
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

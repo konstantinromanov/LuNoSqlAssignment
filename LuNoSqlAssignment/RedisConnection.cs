@@ -37,20 +37,6 @@ namespace LuNoSqlAssignment
 
         public static async Task<RedisConnection> InitializeAsync(string connectionString)
         {
-            //int minWorker, minIOC;
-
-            //ThreadPool.GetMinThreads(out minWorker, out minIOC);
-
-            //if (ThreadPool.SetMinThreads(4, minIOC))
-            //{
-            //    // The minimum number of threads was set successfully.
-            //}
-            //else
-            //{
-            //    // The minimum number of threads was not changed.
-            //}
-
-
             var redisConnection = new RedisConnection(connectionString);
             await redisConnection.ForceReconnectAsync(initializing: true);
 
