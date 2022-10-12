@@ -1,11 +1,8 @@
 ﻿using LuNoSqlAssignment.Models;
-using LuNoSqlAssignment.Resources;
 using LuNoSqlAssignment.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections;
 using System.Diagnostics;
-using System.Globalization;
-using System.Resources;
+
 
 namespace LuNoSqlAssignment.Controllers
 {
@@ -15,14 +12,16 @@ namespace LuNoSqlAssignment.Controllers
         private readonly IConfiguration? _configuration;
         private readonly Task<RedisConnection> _redisConnectionFactory;
         private readonly IPersonsFileAccess _personsFileAccess;
+        private readonly IWebHostEnvironment _env;
         private RedisConnection? _redisConnection;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, Task<RedisConnection> redisConnectionFactory, IPersonsFileAccess personsFileAccess)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, Task<RedisConnection> redisConnectionFactory, IPersonsFileAccess personsFileAccess, IWebHostEnvironment env)
         {
             _logger = logger;
             _configuration = configuration;
             _redisConnectionFactory = redisConnectionFactory;
             _personsFileAccess = personsFileAccess;
+            _env = env;
         }
 
         public IActionResult Index()
@@ -75,11 +74,8 @@ namespace LuNoSqlAssignment.Controllers
             var myGetCommand1 = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync("name"))).ToString();
             //var myGetCommand1 = (await _redisConnection.BasicRetryAsync(async (db) => await db.inse
 
-            var myNames = ResourcesNames.Jonathon;
-
-            var persons = new PersonsFromResourcesFiles().Read();
-
-            _personsFileAccess.SavePersons(persons, "persons.txt");
+            IList<Person> persons = _personsFileAccess.OpenPersons("persons.txt", _env.WebRootPath);
+            //_personsFileAccess.SavePersons(persons, "persons.txt");
 
             return View();
         }

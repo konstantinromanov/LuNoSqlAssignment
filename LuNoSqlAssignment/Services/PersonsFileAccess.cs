@@ -21,11 +21,11 @@ namespace LuNoSqlAssignment.Services
             _fileHandling.WriteToDisk(fileNameWrite, jsonPersonsToFile);
         }
 
-        public IList<Person> OpenPersons(string fileName)
+        public IList<Person> OpenPersons(string fileName, string path = "")
         {
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            _fileHandling.Directory = docPath;
+            _fileHandling.Directory = path == "" ? docPath : path;
 
             try
             {
