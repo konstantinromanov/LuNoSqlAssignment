@@ -20,7 +20,7 @@ namespace LuNoSqlAssignment.Services
             }
             catch (IOException e)
             {
-                throw new Exception(e);
+                throw new Exception(e.ToString());
             }
 
             return readStream;

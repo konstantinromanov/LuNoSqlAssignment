@@ -41,7 +41,7 @@ namespace LuNoSqlAssignment.Services
             }
             catch (Exception e)
             {
-                throw new FileNotFoundException(e);
+                throw new FileNotFoundException(e.ToString());
             }
         }
     }

@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Resources\ResourceNames.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="6.0.9" />
     <PackageReference Include="Redis.OM" Version="0.2.3" />
     <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
@@ -22,17 +18,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\ResourcesAddresses.Designer.cs">
+    <Compile Update="Resources\ResourcesAddresses.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ResourcesAddresses.resx</DependentUpon>
     </Compile>
-    <Compile Update="Properties\ResourcesAddresses2.Designer.cs">
+    <Compile Update="Resources\ResourcesAddresses2.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ResourcesAddresses2.resx</DependentUpon>
     </Compile>
-    <Compile Update="Properties\ResourcesNames.Designer.cs">
+    <Compile Update="Resources\ResourcesNames.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>ResourcesNames.resx</DependentUpon>
@@ -40,15 +36,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\ResourcesAddresses.resx">
+    <EmbeddedResource Update="Resources\ResourcesAddresses.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourcesAddresses.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\ResourcesAddresses2.resx">
+    <EmbeddedResource Update="Resources\ResourcesAddresses2.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourcesAddresses2.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Properties\ResourcesNames.resx">
+    <EmbeddedResource Update="Resources\ResourcesNames.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourcesNames.Designer.cs</LastGenOutput>
     </EmbeddedResource>
