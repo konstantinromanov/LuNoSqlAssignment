@@ -22,6 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Properties\ResourcesAddresses.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResourcesAddresses.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\ResourcesAddresses2.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ResourcesAddresses2.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\ResourcesNames.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -30,6 +40,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Properties\ResourcesAddresses.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourcesAddresses.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\ResourcesAddresses2.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourcesAddresses2.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\ResourcesNames.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourcesNames.Designer.cs</LastGenOutput>

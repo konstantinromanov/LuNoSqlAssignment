@@ -1,5 +1,6 @@
 ﻿using LuNoSqlAssignment.Models;
 using LuNoSqlAssignment.Properties;
+using LuNoSqlAssignment.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Diagnostics;
@@ -13,13 +14,15 @@ namespace LuNoSqlAssignment.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IConfiguration? _configuration;
         private readonly Task<RedisConnection> _redisConnectionFactory;
+        private readonly IPersonsFileAccess _personsFileAccess;
         private RedisConnection? _redisConnection;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, Task<RedisConnection> redisConnectionFactory)
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration, Task<RedisConnection> redisConnectionFactory, IPersonsFileAccess personsFileAccess)
         {
             _logger = logger;
             _configuration = configuration;
             _redisConnectionFactory = redisConnectionFactory;
+            _personsFileAccess = personsFileAccess;
         }
 
         public IActionResult Index()
@@ -75,8 +78,11 @@ namespace LuNoSqlAssignment.Controllers
             var myNames = ResourcesNames.Jonathon;
 
 
+
+
+
             List<Person> persons = new List<Person>();
-            
+
 
             ResourceSet? resourceSet = ResourcesNames.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
 
@@ -85,13 +91,41 @@ namespace LuNoSqlAssignment.Controllers
                 foreach (DictionaryEntry item in resourceSet)
                 {
                     persons.Add(new Person { Name = (string?)item.Key, Surname = (string?)item.Value });
+                }
+            }
 
+            ResourceSet? resourceSetAddress = ResourcesAddresses.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            if (resourceSetAddress != null)
+            {
+                int i = 0;
+
+                foreach (DictionaryEntry item in resourceSetAddress)
+                {
+                    persons[i++].Address = new Address { HouseNumber = (string?)item.Key, Street = (string?)item.Value };
+                }
+            }
+
+            ResourceSet? resourceSetAddress2 = ResourcesAddresses2.ResourceManager.GetResourceSet(CultureInfo.CurrentUICulture, true, true);
+
+            if (resourceSetAddress2 != null)
+            {
+                int i = 0;
+
+                foreach (DictionaryEntry item in resourceSetAddress2)
+                {
+                    if (persons[i].Address != null)
+                    {
+                        persons[i].Address.City = (string?)item.Key;
+                        persons[i++].Address.PostalCode = (string?)item.Value;
+                    }
 
                 }
             }
-           
-           
-         
+
+            _personsFileAccess.SavePersons(persons, "persons.txt");
+
+
             return View();
         }
     }

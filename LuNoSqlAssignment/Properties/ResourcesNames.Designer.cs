@@ -3787,6 +3787,31 @@ namespace LuNoSqlAssignment.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+        ///&lt;root&gt;
+        ///  &lt;!-- 
+        ///    Microsoft ResX Schema 
+        ///    
+        ///    Version 2.0
+        ///    
+        ///    The primary goals of this format is to allow a simple XML format 
+        ///    that is mostly human readable. The generation and parsing of the 
+        ///    various data types are done through the TypeConverter classes 
+        ///    associated with the data types.
+        ///    
+        ///    Example:
+        ///    
+        ///    ... ado.net/XML headers &amp; schema ...
+        ///    &lt;resheader name=&quot;resmimetype&quot;&gt;text/microsoft-resx&lt;/resheader&gt;
+        ///    &lt;resheader n [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string ResourcesAddresses {
+            get {
+                return ResourceManager.GetString("ResourcesAddresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Vazquez.
         /// </summary>
         public static string Rex {

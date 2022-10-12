@@ -1,0 +1,1620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="10th Court" xml:space="preserve">
+    <value> FL 32765</value>
+  </data>
+  <data name="2nd Court" xml:space="preserve">
+    <value> NC 27834</value>
+  </data>
+  <data name="2nd Lane" xml:space="preserve">
+    <value> TX 79106</value>
+  </data>
+  <data name="4th St." xml:space="preserve">
+    <value> NJ 07631</value>
+  </data>
+  <data name="6th Drive" xml:space="preserve">
+    <value> NJ 07747</value>
+  </data>
+  <data name="Acacia Rd." xml:space="preserve">
+    <value> NY 11432</value>
+  </data>
+  <data name="Acacia St." xml:space="preserve">
+    <value> FL 33458</value>
+  </data>
+  <data name="Adams Rd." xml:space="preserve">
+    <value> MD 21784</value>
+  </data>
+  <data name="Addison St." xml:space="preserve">
+    <value> IL 60089</value>
+  </data>
+  <data name="Addison St.1" xml:space="preserve">
+    <value> IL 60062</value>
+  </data>
+  <data name="Addison Street" xml:space="preserve">
+    <value> GA 30083</value>
+  </data>
+  <data name="Airport St." xml:space="preserve">
+    <value> MT 59701</value>
+  </data>
+  <data name="Albany Rd." xml:space="preserve">
+    <value> IA 52804</value>
+  </data>
+  <data name="Albany St." xml:space="preserve">
+    <value> NJ 08701</value>
+  </data>
+  <data name="Alderwood Street" xml:space="preserve">
+    <value> MA 01930</value>
+  </data>
+  <data name="Amerige Road" xml:space="preserve">
+    <value> CT 06514</value>
+  </data>
+  <data name="Amherst St." xml:space="preserve">
+    <value> MS 39120</value>
+  </data>
+  <data name="Andover St." xml:space="preserve">
+    <value> NC 27540</value>
+  </data>
+  <data name="Ann Avenue" xml:space="preserve">
+    <value> CO 80123</value>
+  </data>
+  <data name="Annadale Street" xml:space="preserve">
+    <value> IN 46947</value>
+  </data>
+  <data name="Applegate Court" xml:space="preserve">
+    <value> CA 90274</value>
+  </data>
+  <data name="Applegate St." xml:space="preserve">
+    <value> IL 60085</value>
+  </data>
+  <data name="Applegate Street" xml:space="preserve">
+    <value> NC 27103</value>
+  </data>
+  <data name="Arch Lane" xml:space="preserve">
+    <value> MN 55912</value>
+  </data>
+  <data name="Argyle Drive" xml:space="preserve">
+    <value> MA 01760</value>
+  </data>
+  <data name="Arlington Dr." xml:space="preserve">
+    <value> MD 21206</value>
+  </data>
+  <data name="Arlington St." xml:space="preserve">
+    <value> CA 92831</value>
+  </data>
+  <data name="Armstrong Street" xml:space="preserve">
+    <value> IN 47711</value>
+  </data>
+  <data name="Arnold St." xml:space="preserve">
+    <value> NC 28803</value>
+  </data>
+  <data name="Arnold St.1" xml:space="preserve">
+    <value> NY 11553</value>
+  </data>
+  <data name="Arnold Street" xml:space="preserve">
+    <value> IL 60107</value>
+  </data>
+  <data name="Atlantic Drive" xml:space="preserve">
+    <value> AL 36301</value>
+  </data>
+  <data name="Baker Ave." xml:space="preserve">
+    <value> MI 48239</value>
+  </data>
+  <data name="Baker Lane" xml:space="preserve">
+    <value> KY 40356</value>
+  </data>
+  <data name="Baker Road" xml:space="preserve">
+    <value> CA 93035</value>
+  </data>
+  <data name="Baker St." xml:space="preserve">
+    <value> NC 27028</value>
+  </data>
+  <data name="Bay Court" xml:space="preserve">
+    <value> AR 72209</value>
+  </data>
+  <data name="Beach Road" xml:space="preserve">
+    <value> NC 27529</value>
+  </data>
+  <data name="Bedford Drive" xml:space="preserve">
+    <value> FL 32725</value>
+  </data>
+  <data name="Bedford Street" xml:space="preserve">
+    <value> VA 22180</value>
+  </data>
+  <data name="Beechwood Dr." xml:space="preserve">
+    <value> AL 35209</value>
+  </data>
+  <data name="Bellevue Drive" xml:space="preserve">
+    <value> NY 10701</value>
+  </data>
+  <data name="Berkshire Ave." xml:space="preserve">
+    <value> MN 55021</value>
+  </data>
+  <data name="Birch Hill Dr." xml:space="preserve">
+    <value> MS 38632</value>
+  </data>
+  <data name="Birch Hill St." xml:space="preserve">
+    <value> PA 19454</value>
+  </data>
+  <data name="Blackburn Avenue" xml:space="preserve">
+    <value> MS 39564</value>
+  </data>
+  <data name="Blackburn Street" xml:space="preserve">
+    <value> FL 34293</value>
+  </data>
+  <data name="Blue Spring St." xml:space="preserve">
+    <value> NY 11717</value>
+  </data>
+  <data name="Boston Drive" xml:space="preserve">
+    <value> MI 48167</value>
+  </data>
+  <data name="Boston St." xml:space="preserve">
+    <value> NC 28792</value>
+  </data>
+  <data name="Bow Ridge Drive" xml:space="preserve">
+    <value> GA 30075</value>
+  </data>
+  <data name="Bowman Ave." xml:space="preserve">
+    <value> NJ 08330</value>
+  </data>
+  <data name="Bowman Ave.1" xml:space="preserve">
+    <value> MD 20832</value>
+  </data>
+  <data name="Branch Drive" xml:space="preserve">
+    <value> PA 19406</value>
+  </data>
+  <data name="Briarwood Dr." xml:space="preserve">
+    <value> VA 20175</value>
+  </data>
+  <data name="Brickyard St." xml:space="preserve">
+    <value> TN 37601</value>
+  </data>
+  <data name="Bridge Ave." xml:space="preserve">
+    <value> MA 01453</value>
+  </data>
+  <data name="Bridgeton Ave." xml:space="preserve">
+    <value> NJ 08742</value>
+  </data>
+  <data name="Bridgeton Street" xml:space="preserve">
+    <value> MI 48180</value>
+  </data>
+  <data name="Broad Road" xml:space="preserve">
+    <value> WI 54956</value>
+  </data>
+  <data name="Broad Street" xml:space="preserve">
+    <value> OH 43420</value>
+  </data>
+  <data name="Brook Avenue" xml:space="preserve">
+    <value> CA 95060</value>
+  </data>
+  <data name="Brook St." xml:space="preserve">
+    <value> MA 01020</value>
+  </data>
+  <data name="Brook Street" xml:space="preserve">
+    <value> IN 46410</value>
+  </data>
+  <data name="Buckingham St." xml:space="preserve">
+    <value> FL 32707</value>
+  </data>
+  <data name="Buttonwood Rd." xml:space="preserve">
+    <value> NY 11377</value>
+  </data>
+  <data name="Cactus Street" xml:space="preserve">
+    <value> NJ 08831</value>
+  </data>
+  <data name="Campfire Ave." xml:space="preserve">
+    <value> VA 23503</value>
+  </data>
+  <data name="Campfire Dr." xml:space="preserve">
+    <value> MA 02138</value>
+  </data>
+  <data name="Campfire Street" xml:space="preserve">
+    <value> TN 37076</value>
+  </data>
+  <data name="Cardinal Street" xml:space="preserve">
+    <value> OH 45840</value>
+  </data>
+  <data name="Carpenter Court" xml:space="preserve">
+    <value> MN 55372</value>
+  </data>
+  <data name="Carriage Ave." xml:space="preserve">
+    <value> MN 55987</value>
+  </data>
+  <data name="Cedarwood Rd." xml:space="preserve">
+    <value> GA 31204</value>
+  </data>
+  <data name="Center Drive" xml:space="preserve">
+    <value> FL 34711</value>
+  </data>
+  <data name="Center St." xml:space="preserve">
+    <value> CT 06405</value>
+  </data>
+  <data name="Central Drive" xml:space="preserve">
+    <value> PA 19050</value>
+  </data>
+  <data name="Central Rd." xml:space="preserve">
+    <value> OH 44601</value>
+  </data>
+  <data name="Chapel Drive" xml:space="preserve">
+    <value> MD 20601</value>
+  </data>
+  <data name="Cherry Ave." xml:space="preserve">
+    <value> PA 17268</value>
+  </data>
+  <data name="Cherry Ave.1" xml:space="preserve">
+    <value> NY 12601</value>
+  </data>
+  <data name="Cherry Hill Dr." xml:space="preserve">
+    <value> CA 95820</value>
+  </data>
+  <data name="Chestnut St." xml:space="preserve">
+    <value> RI 02886</value>
+  </data>
+  <data name="Clark Dr." xml:space="preserve">
+    <value> WI 54911</value>
+  </data>
+  <data name="Clay Ave." xml:space="preserve">
+    <value> MD 21222</value>
+  </data>
+  <data name="Clay Lane" xml:space="preserve">
+    <value> MD 21701</value>
+  </data>
+  <data name="Clay Road" xml:space="preserve">
+    <value> WI 53546</value>
+  </data>
+  <data name="Clinton Dr." xml:space="preserve">
+    <value> NY 11801</value>
+  </data>
+  <data name="Colonial St." xml:space="preserve">
+    <value> GA 30132</value>
+  </data>
+  <data name="Columbia St." xml:space="preserve">
+    <value> NJ 08087</value>
+  </data>
+  <data name="Cooper St." xml:space="preserve">
+    <value> FL 33594</value>
+  </data>
+  <data name="Cooper St.1" xml:space="preserve">
+    <value> FL 33404</value>
+  </data>
+  <data name="Corona St." xml:space="preserve">
+    <value> FL 34786</value>
+  </data>
+  <data name="Corona Street" xml:space="preserve">
+    <value> NY 11779</value>
+  </data>
+  <data name="Country Club Dr." xml:space="preserve">
+    <value> FL 34698</value>
+  </data>
+  <data name="Country Club St." xml:space="preserve">
+    <value> OH 44720</value>
+  </data>
+  <data name="County St." xml:space="preserve">
+    <value> IL 60515</value>
+  </data>
+  <data name="County St.1" xml:space="preserve">
+    <value> PA 18052</value>
+  </data>
+  <data name="Court Court" xml:space="preserve">
+    <value> NC 27205</value>
+  </data>
+  <data name="Court Dr." xml:space="preserve">
+    <value> NY 11001</value>
+  </data>
+  <data name="Courtland Dr." xml:space="preserve">
+    <value> IN 46360</value>
+  </data>
+  <data name="Creek Ave." xml:space="preserve">
+    <value> MI 48601</value>
+  </data>
+  <data name="Creekside Street" xml:space="preserve">
+    <value> AK 99654</value>
+  </data>
+  <data name="Cypress Ave." xml:space="preserve">
+    <value> NJ 07002</value>
+  </data>
+  <data name="Cypress Ave.1" xml:space="preserve">
+    <value> OH 44070</value>
+  </data>
+  <data name="Cypress St." xml:space="preserve">
+    <value> IA 50501</value>
+  </data>
+  <data name="Cypress St.1" xml:space="preserve">
+    <value> IL 60621</value>
+  </data>
+  <data name="Deerfield Circle" xml:space="preserve">
+    <value> IL 60174</value>
+  </data>
+  <data name="Depot Drive" xml:space="preserve">
+    <value> IA 50701</value>
+  </data>
+  <data name="Devon Road" xml:space="preserve">
+    <value> CT 06082</value>
+  </data>
+  <data name="Devon St." xml:space="preserve">
+    <value> NC 28052</value>
+  </data>
+  <data name="Devon St.1" xml:space="preserve">
+    <value> NJ 07032</value>
+  </data>
+  <data name="Division Lane" xml:space="preserve">
+    <value> GA 30705</value>
+  </data>
+  <data name="Dogwood Ave." xml:space="preserve">
+    <value> PA 15642</value>
+  </data>
+  <data name="Dogwood Road" xml:space="preserve">
+    <value> NJ 07960</value>
+  </data>
+  <data name="Dunbar St." xml:space="preserve">
+    <value> IL 60409</value>
+  </data>
+  <data name="Dunbar St.1" xml:space="preserve">
+    <value> NY 11590</value>
+  </data>
+  <data name="Durham Avenue" xml:space="preserve">
+    <value> OH 43551</value>
+  </data>
+  <data name="Durham Drive" xml:space="preserve">
+    <value> FL 32159</value>
+  </data>
+  <data name="E. 1st St." xml:space="preserve">
+    <value> SC 29576</value>
+  </data>
+  <data name="E. Belmont St." xml:space="preserve">
+    <value> IN 46201</value>
+  </data>
+  <data name="E. Greenview Drive" xml:space="preserve">
+    <value> MD 21244</value>
+  </data>
+  <data name="E. Hartford Court" xml:space="preserve">
+    <value> NY 11735</value>
+  </data>
+  <data name="E. Magnolia St." xml:space="preserve">
+    <value> NC 27330</value>
+  </data>
+  <data name="E. Sheffield Ave." xml:space="preserve">
+    <value> IN 46375</value>
+  </data>
+  <data name="E. Thompson Ave." xml:space="preserve">
+    <value> NY 11368</value>
+  </data>
+  <data name="Eagle Street" xml:space="preserve">
+    <value> FL 32068</value>
+  </data>
+  <data name="East Border St." xml:space="preserve">
+    <value> NC 28645</value>
+  </data>
+  <data name="East Division Ave." xml:space="preserve">
+    <value> NC 28303</value>
+  </data>
+  <data name="East Gates Ave." xml:space="preserve">
+    <value> IL 60139</value>
+  </data>
+  <data name="East High Point St." xml:space="preserve">
+    <value> GA 30052</value>
+  </data>
+  <data name="East Hill Street" xml:space="preserve">
+    <value> GA 30134</value>
+  </data>
+  <data name="East Ivy Street" xml:space="preserve">
+    <value> ND 58201</value>
+  </data>
+  <data name="East Lane" xml:space="preserve">
+    <value> CA 91733</value>
+  </data>
+  <data name="East Lane1" xml:space="preserve">
+    <value> NC 27909</value>
+  </data>
+  <data name="East Leeton Ridge St." xml:space="preserve">
+    <value> MD 21144</value>
+  </data>
+  <data name="East Littleton Dr." xml:space="preserve">
+    <value> PA 17522</value>
+  </data>
+  <data name="East Proctor Street" xml:space="preserve">
+    <value> IA 52240</value>
+  </data>
+  <data name="East Rock Creek St." xml:space="preserve">
+    <value> NY 11746</value>
+  </data>
+  <data name="East Street" xml:space="preserve">
+    <value> GA 31061</value>
+  </data>
+  <data name="East Thompson Drive" xml:space="preserve">
+    <value> FL 32259</value>
+  </data>
+  <data name="Edgefield Ave." xml:space="preserve">
+    <value> NJ 07860</value>
+  </data>
+  <data name="Edgewood Court" xml:space="preserve">
+    <value> TN 37379</value>
+  </data>
+  <data name="Edgewood St." xml:space="preserve">
+    <value> MA 02124</value>
+  </data>
+  <data name="El Dorado Circle" xml:space="preserve">
+    <value> IL 60076</value>
+  </data>
+  <data name="Elmwood Lane" xml:space="preserve">
+    <value> NJ 08080</value>
+  </data>
+  <data name="Euclid Road" xml:space="preserve">
+    <value> MI 49684</value>
+  </data>
+  <data name="Euclid Street" xml:space="preserve">
+    <value> IN 46544</value>
+  </data>
+  <data name="Fairview Street" xml:space="preserve">
+    <value> TX 76039</value>
+  </data>
+  <data name="Fairway Court" xml:space="preserve">
+    <value> FL 34231</value>
+  </data>
+  <data name="Fifth Street" xml:space="preserve">
+    <value> CO 80241</value>
+  </data>
+  <data name="Fordham St." xml:space="preserve">
+    <value> MD 20874</value>
+  </data>
+  <data name="Forest Ave." xml:space="preserve">
+    <value> PA 17201</value>
+  </data>
+  <data name="Forest Ave.1" xml:space="preserve">
+    <value> CA 90505</value>
+  </data>
+  <data name="Forest Court" xml:space="preserve">
+    <value> GA 30736</value>
+  </data>
+  <data name="Forest St." xml:space="preserve">
+    <value> MS 38801</value>
+  </data>
+  <data name="Foster St." xml:space="preserve">
+    <value> GA 30101</value>
+  </data>
+  <data name="Foster Street" xml:space="preserve">
+    <value> NY 13440</value>
+  </data>
+  <data name="Front Road" xml:space="preserve">
+    <value> MA 01420</value>
+  </data>
+  <data name="Galvin Court" xml:space="preserve">
+    <value> OH 44691</value>
+  </data>
+  <data name="Galvin Rd." xml:space="preserve">
+    <value> IL 60446</value>
+  </data>
+  <data name="Galvin Rd.1" xml:space="preserve">
+    <value> CA 92111</value>
+  </data>
+  <data name="Gartner Dr." xml:space="preserve">
+    <value> NY 11414</value>
+  </data>
+  <data name="Gartner St." xml:space="preserve">
+    <value> NJ 08861</value>
+  </data>
+  <data name="George Street" xml:space="preserve">
+    <value> GA 30188</value>
+  </data>
+  <data name="Glen Creek Ave." xml:space="preserve">
+    <value> IL 60453</value>
+  </data>
+  <data name="Glen Creek Street" xml:space="preserve">
+    <value> GA 30040</value>
+  </data>
+  <data name="Glen Eagles Ave." xml:space="preserve">
+    <value> TX 76522</value>
+  </data>
+  <data name="Glenholme St." xml:space="preserve">
+    <value> CT 06484</value>
+  </data>
+  <data name="Glenholme Street" xml:space="preserve">
+    <value> CA 92236</value>
+  </data>
+  <data name="Glenlake Court" xml:space="preserve">
+    <value> NY 11731</value>
+  </data>
+  <data name="Glenridge Rd." xml:space="preserve">
+    <value> CA 93555</value>
+  </data>
+  <data name="Golden Star Rd." xml:space="preserve">
+    <value> MI 48101</value>
+  </data>
+  <data name="Golf St." xml:space="preserve">
+    <value> FL 32404</value>
+  </data>
+  <data name="Green Hill Dr." xml:space="preserve">
+    <value> MN 55104</value>
+  </data>
+  <data name="Green Hill Street" xml:space="preserve">
+    <value> PA 19380</value>
+  </data>
+  <data name="Green Lake Lane" xml:space="preserve">
+    <value> NJ 07202</value>
+  </data>
+  <data name="Green Lake St." xml:space="preserve">
+    <value> IL 60016</value>
+  </data>
+  <data name="Green St." xml:space="preserve">
+    <value> WV 25801</value>
+  </data>
+  <data name="Green St.1" xml:space="preserve">
+    <value> AZ 85718</value>
+  </data>
+  <data name="Gregory Ave." xml:space="preserve">
+    <value> NE 68107</value>
+  </data>
+  <data name="Gregory Street" xml:space="preserve">
+    <value> NJ 08759</value>
+  </data>
+  <data name="Greystone Lane" xml:space="preserve">
+    <value> MA 01841</value>
+  </data>
+  <data name="Griffin Lane" xml:space="preserve">
+    <value> MA 01757</value>
+  </data>
+  <data name="Griffin St." xml:space="preserve">
+    <value> PA 16506</value>
+  </data>
+  <data name="Gulf St." xml:space="preserve">
+    <value> MT 59801</value>
+  </data>
+  <data name="Gulf Street" xml:space="preserve">
+    <value> OH 43512</value>
+  </data>
+  <data name="Hall St." xml:space="preserve">
+    <value> FL 33756</value>
+  </data>
+  <data name="Hanover Street" xml:space="preserve">
+    <value> NY 10598</value>
+  </data>
+  <data name="Harrison St." xml:space="preserve">
+    <value> NY 11413</value>
+  </data>
+  <data name="Harrison Street" xml:space="preserve">
+    <value> OH 44221</value>
+  </data>
+  <data name="Harrison Street1" xml:space="preserve">
+    <value> PA 19053</value>
+  </data>
+  <data name="Hartford Court" xml:space="preserve">
+    <value> PA 17701</value>
+  </data>
+  <data name="Hartford Drive" xml:space="preserve">
+    <value> MD 21921</value>
+  </data>
+  <data name="Hartford Street" xml:space="preserve">
+    <value> NJ 08054</value>
+  </data>
+  <data name="Harvard Avenue" xml:space="preserve">
+    <value> NY 11420</value>
+  </data>
+  <data name="Hawthorne Lane" xml:space="preserve">
+    <value> TN 37830</value>
+  </data>
+  <data name="High Noon Ave." xml:space="preserve">
+    <value> MI 49417</value>
+  </data>
+  <data name="High Noon Avenue" xml:space="preserve">
+    <value> WI 53402</value>
+  </data>
+  <data name="High Ridge Dr." xml:space="preserve">
+    <value> MI 48045</value>
+  </data>
+  <data name="High Ridge Rd." xml:space="preserve">
+    <value> WI 53186</value>
+  </data>
+  <data name="High Ridge St." xml:space="preserve">
+    <value> MN 56401</value>
+  </data>
+  <data name="High Ridge Street" xml:space="preserve">
+    <value> NY 11757</value>
+  </data>
+  <data name="Hill Field Avenue" xml:space="preserve">
+    <value> NY 12550</value>
+  </data>
+  <data name="Hilldale Ave." xml:space="preserve">
+    <value> GA 30605</value>
+  </data>
+  <data name="Hillside Drive" xml:space="preserve">
+    <value> CT 06066</value>
+  </data>
+  <data name="Hillside St." xml:space="preserve">
+    <value> NJ 07055</value>
+  </data>
+  <data name="Homestead Dr." xml:space="preserve">
+    <value> GA 30084</value>
+  </data>
+  <data name="Honey Creek Street" xml:space="preserve">
+    <value> VA 23703</value>
+  </data>
+  <data name="Hudson Street" xml:space="preserve">
+    <value> OH 44646</value>
+  </data>
+  <data name="Illinois Rd." xml:space="preserve">
+    <value> CT 06790</value>
+  </data>
+  <data name="Illinois Street" xml:space="preserve">
+    <value> CO 80911</value>
+  </data>
+  <data name="Ivy Dr." xml:space="preserve">
+    <value> OR 97402</value>
+  </data>
+  <data name="Ivy Lane" xml:space="preserve">
+    <value> CA 95127</value>
+  </data>
+  <data name="James Drive" xml:space="preserve">
+    <value> NJ 07039</value>
+  </data>
+  <data name="James Rd." xml:space="preserve">
+    <value> NJ 08096</value>
+  </data>
+  <data name="Jennings Dr." xml:space="preserve">
+    <value> MA 02453</value>
+  </data>
+  <data name="Jockey Hollow Avenue" xml:space="preserve">
+    <value> NY 12203</value>
+  </data>
+  <data name="Jockey Hollow Lane" xml:space="preserve">
+    <value> SC 29526</value>
+  </data>
+  <data name="John Ave." xml:space="preserve">
+    <value> IL 60451</value>
+  </data>
+  <data name="Johnson Dr." xml:space="preserve">
+    <value> FL 34787</value>
+  </data>
+  <data name="Ketch Harbour Ave." xml:space="preserve">
+    <value> NY 11795</value>
+  </data>
+  <data name="Ketch Harbour St." xml:space="preserve">
+    <value> IL 60426</value>
+  </data>
+  <data name="Kirkland Drive" xml:space="preserve">
+    <value> CA 95050</value>
+  </data>
+  <data name="Kirkland St." xml:space="preserve">
+    <value> RI 02895</value>
+  </data>
+  <data name="La Sierra Ave." xml:space="preserve">
+    <value> NJ 08081</value>
+  </data>
+  <data name="Lake Forest Circle" xml:space="preserve">
+    <value> CT 06010</value>
+  </data>
+  <data name="Lake View St." xml:space="preserve">
+    <value> CA 92307</value>
+  </data>
+  <data name="Lake View Street" xml:space="preserve">
+    <value> FL 32303</value>
+  </data>
+  <data name="Lakeview Circle" xml:space="preserve">
+    <value> MI 48423</value>
+  </data>
+  <data name="Lancaster Ave." xml:space="preserve">
+    <value> FL 32955</value>
+  </data>
+  <data name="Lancaster St." xml:space="preserve">
+    <value> NJ 07024</value>
+  </data>
+  <data name="Leatherwood Street" xml:space="preserve">
+    <value> NJ 07103</value>
+  </data>
+  <data name="Lees Creek Drive" xml:space="preserve">
+    <value> MN 55337</value>
+  </data>
+  <data name="Lees Creek Rd." xml:space="preserve">
+    <value> MA 02048</value>
+  </data>
+  <data name="Leeton Ridge Circle" xml:space="preserve">
+    <value> TN 37128</value>
+  </data>
+  <data name="Leeton Ridge Court" xml:space="preserve">
+    <value> MN 55033</value>
+  </data>
+  <data name="Lilac Rd." xml:space="preserve">
+    <value> NJ 07430</value>
+  </data>
+  <data name="Livingston Drive" xml:space="preserve">
+    <value> VA 23059</value>
+  </data>
+  <data name="Locust Ave." xml:space="preserve">
+    <value> SC 29621</value>
+  </data>
+  <data name="Logan St." xml:space="preserve">
+    <value> UT 84067</value>
+  </data>
+  <data name="Logan St.1" xml:space="preserve">
+    <value> NJ 08105</value>
+  </data>
+  <data name="Longbranch Court" xml:space="preserve">
+    <value> GA 30030</value>
+  </data>
+  <data name="Longbranch Drive" xml:space="preserve">
+    <value> WI 54952</value>
+  </data>
+  <data name="Longbranch St." xml:space="preserve">
+    <value> RI 02852</value>
+  </data>
+  <data name="Longfellow Dr." xml:space="preserve">
+    <value> NY 11580</value>
+  </data>
+  <data name="Lookout Drive" xml:space="preserve">
+    <value> NC 27502</value>
+  </data>
+  <data name="Lyme Ave." xml:space="preserve">
+    <value> PA 17543</value>
+  </data>
+  <data name="Lyme Dr." xml:space="preserve">
+    <value> MA 02135</value>
+  </data>
+  <data name="Madison Rd." xml:space="preserve">
+    <value> MD 21220</value>
+  </data>
+  <data name="Maiden St." xml:space="preserve">
+    <value> WI 54880</value>
+  </data>
+  <data name="Main Dr." xml:space="preserve">
+    <value> NY 11421</value>
+  </data>
+  <data name="Manchester Ave." xml:space="preserve">
+    <value> NY 11701</value>
+  </data>
+  <data name="Manhattan Court" xml:space="preserve">
+    <value> WA 98801</value>
+  </data>
+  <data name="Manor Court" xml:space="preserve">
+    <value> PA 15601</value>
+  </data>
+  <data name="Maple Street" xml:space="preserve">
+    <value> FL 32907</value>
+  </data>
+  <data name="Marconi Drive" xml:space="preserve">
+    <value> OH 44240</value>
+  </data>
+  <data name="Marconi Drive1" xml:space="preserve">
+    <value> NY 11510</value>
+  </data>
+  <data name="Market Street" xml:space="preserve">
+    <value> OH 44122</value>
+  </data>
+  <data name="Market Street1" xml:space="preserve">
+    <value> MN 55068</value>
+  </data>
+  <data name="Marshall Dr." xml:space="preserve">
+    <value> PA 18015</value>
+  </data>
+  <data name="Marvon Dr." xml:space="preserve">
+    <value> MI 48103</value>
+  </data>
+  <data name="Mayfair Ave." xml:space="preserve">
+    <value> IL 60103</value>
+  </data>
+  <data name="Mayfair St." xml:space="preserve">
+    <value> FL 33917</value>
+  </data>
+  <data name="Mayfield Dr." xml:space="preserve">
+    <value> NJ 07753</value>
+  </data>
+  <data name="Mayfield Drive" xml:space="preserve">
+    <value> MI 48331</value>
+  </data>
+  <data name="Mechanic Ave." xml:space="preserve">
+    <value> MI 48042</value>
+  </data>
+  <data name="Middle River St." xml:space="preserve">
+    <value> FL 33905</value>
+  </data>
+  <data name="Mill Drive" xml:space="preserve">
+    <value> IL 60201</value>
+  </data>
+  <data name="Mill Pond Dr." xml:space="preserve">
+    <value> WA 98037</value>
+  </data>
+  <data name="Mill Pond Drive" xml:space="preserve">
+    <value> TX 75080</value>
+  </data>
+  <data name="Miller St." xml:space="preserve">
+    <value> TN 38501</value>
+  </data>
+  <data name="Monroe St." xml:space="preserve">
+    <value> WI 53562</value>
+  </data>
+  <data name="Mountainview Street" xml:space="preserve">
+    <value> MA 01970</value>
+  </data>
+  <data name="Mulberry Ave." xml:space="preserve">
+    <value> NJ 08844</value>
+  </data>
+  <data name="N. East St." xml:space="preserve">
+    <value> MI 48706</value>
+  </data>
+  <data name="N. Garden Drive" xml:space="preserve">
+    <value> NJ 08401</value>
+  </data>
+  <data name="N. Mayfair Lane" xml:space="preserve">
+    <value> TX 75126</value>
+  </data>
+  <data name="N. Pennsylvania Drive" xml:space="preserve">
+    <value> MA 01886</value>
+  </data>
+  <data name="N. Sulphur Springs St." xml:space="preserve">
+    <value> MD 20735</value>
+  </data>
+  <data name="N. Vermont Court" xml:space="preserve">
+    <value> NY 11756</value>
+  </data>
+  <data name="N. Wall St." xml:space="preserve">
+    <value> CA 94580</value>
+  </data>
+  <data name="NE. Lafayette Avenue" xml:space="preserve">
+    <value> OH 44663</value>
+  </data>
+  <data name="NE. Pin Oak Ave." xml:space="preserve">
+    <value> NJ 07410</value>
+  </data>
+  <data name="New Ave." xml:space="preserve">
+    <value> VA 23228</value>
+  </data>
+  <data name="New Dr." xml:space="preserve">
+    <value> PA 15044</value>
+  </data>
+  <data name="New Dr.1" xml:space="preserve">
+    <value> VA 22101</value>
+  </data>
+  <data name="Newport Lane" xml:space="preserve">
+    <value> AR 71730</value>
+  </data>
+  <data name="North Hamilton Ave." xml:space="preserve">
+    <value> IL 60120</value>
+  </data>
+  <data name="North Parker Ave." xml:space="preserve">
+    <value> VA 23139</value>
+  </data>
+  <data name="North Sherwood Lane" xml:space="preserve">
+    <value> NJ 08075</value>
+  </data>
+  <data name="North Surrey Drive" xml:space="preserve">
+    <value> MI 48348</value>
+  </data>
+  <data name="North Williams St." xml:space="preserve">
+    <value> NY 11364</value>
+  </data>
+  <data name="NW. Main Court" xml:space="preserve">
+    <value> PA 19468</value>
+  </data>
+  <data name="NW. Snake Hill Dr." xml:space="preserve">
+    <value> MI 48178</value>
+  </data>
+  <data name="NW. Third Dr." xml:space="preserve">
+    <value> IN 46526</value>
+  </data>
+  <data name="NW. Walnutwood St." xml:space="preserve">
+    <value> CT 06109</value>
+  </data>
+  <data name="NW. Westminster Dr." xml:space="preserve">
+    <value> NY 11365</value>
+  </data>
+  <data name="Oak Meadow Court" xml:space="preserve">
+    <value> IL 60181</value>
+  </data>
+  <data name="Oak Meadow Street" xml:space="preserve">
+    <value> FL 32503</value>
+  </data>
+  <data name="Oakwood St." xml:space="preserve">
+    <value> MD 20772</value>
+  </data>
+  <data name="Ohio St." xml:space="preserve">
+    <value> NJ 08037</value>
+  </data>
+  <data name="Oklahoma Ave." xml:space="preserve">
+    <value> MI 48236</value>
+  </data>
+  <data name="Old Marsh Court" xml:space="preserve">
+    <value> MD 21060</value>
+  </data>
+  <data name="Old York St." xml:space="preserve">
+    <value> NJ 08046</value>
+  </data>
+  <data name="Orange St." xml:space="preserve">
+    <value> PA 17036</value>
+  </data>
+  <data name="Overlook Drive" xml:space="preserve">
+    <value> OH 43026</value>
+  </data>
+  <data name="Paris Hill Dr." xml:space="preserve">
+    <value> TN 37055</value>
+  </data>
+  <data name="Paris Hill Dr.1" xml:space="preserve">
+    <value> MA 01902</value>
+  </data>
+  <data name="Paris Hill Rd." xml:space="preserve">
+    <value> NJ 07652</value>
+  </data>
+  <data name="Peachtree Road" xml:space="preserve">
+    <value> OH 45011</value>
+  </data>
+  <data name="Peg Shop Court" xml:space="preserve">
+    <value> TX 78418</value>
+  </data>
+  <data name="Peg Shop Dr." xml:space="preserve">
+    <value> NH 03038</value>
+  </data>
+  <data name="Pendergast Rd." xml:space="preserve">
+    <value> WI 54650</value>
+  </data>
+  <data name="Pendergast St." xml:space="preserve">
+    <value> MN 56601</value>
+  </data>
+  <data name="Pendergast St.1" xml:space="preserve">
+    <value> NY 11412</value>
+  </data>
+  <data name="Peninsula Drive" xml:space="preserve">
+    <value> FL 34221</value>
+  </data>
+  <data name="Pennington Ave." xml:space="preserve">
+    <value> NJ 07042</value>
+  </data>
+  <data name="Pennington Ave.1" xml:space="preserve">
+    <value> FL 33445</value>
+  </data>
+  <data name="Pennington Court" xml:space="preserve">
+    <value> CA 90278</value>
+  </data>
+  <data name="Pennington Drive" xml:space="preserve">
+    <value> FL 33442</value>
+  </data>
+  <data name="Pennington Street" xml:space="preserve">
+    <value> NY 14450</value>
+  </data>
+  <data name="Pennsylvania St." xml:space="preserve">
+    <value> KY 42101</value>
+  </data>
+  <data name="Pheasant Dr." xml:space="preserve">
+    <value> OH 45103</value>
+  </data>
+  <data name="Pheasant Rd." xml:space="preserve">
+    <value> KY 40004</value>
+  </data>
+  <data name="Pheasant Street" xml:space="preserve">
+    <value> NC 27012</value>
+  </data>
+  <data name="Pheasant Street1" xml:space="preserve">
+    <value> MA 01826</value>
+  </data>
+  <data name="Pheasant Street2" xml:space="preserve">
+    <value> MA 02360</value>
+  </data>
+  <data name="Philmont Street" xml:space="preserve">
+    <value> OH 45365</value>
+  </data>
+  <data name="Pierce Dr." xml:space="preserve">
+    <value> GA 30252</value>
+  </data>
+  <data name="Pierce St." xml:space="preserve">
+    <value> NJ 07110</value>
+  </data>
+  <data name="Pilgrim Court" xml:space="preserve">
+    <value> SD 57401</value>
+  </data>
+  <data name="Pilgrim Dr." xml:space="preserve">
+    <value> TX 76901</value>
+  </data>
+  <data name="Pilgrim Road" xml:space="preserve">
+    <value> FL 34952</value>
+  </data>
+  <data name="Pin Oak Ave." xml:space="preserve">
+    <value> IA 51501</value>
+  </data>
+  <data name="Pin Oak St." xml:space="preserve">
+    <value> NY 11762</value>
+  </data>
+  <data name="Pine Ave." xml:space="preserve">
+    <value> PA 17325</value>
+  </data>
+  <data name="Pine Drive" xml:space="preserve">
+    <value> MI 48146</value>
+  </data>
+  <data name="Pineknoll Road" xml:space="preserve">
+    <value> MI 48430</value>
+  </data>
+  <data name="Pineknoll St." xml:space="preserve">
+    <value> NY 11725</value>
+  </data>
+  <data name="Plymouth Street" xml:space="preserve">
+    <value> OH 44312</value>
+  </data>
+  <data name="Poor House Dr." xml:space="preserve">
+    <value> MO 65401</value>
+  </data>
+  <data name="Poor House Street" xml:space="preserve">
+    <value> NJ 07093</value>
+  </data>
+  <data name="Primrose Court" xml:space="preserve">
+    <value> MI 48322</value>
+  </data>
+  <data name="Primrose St." xml:space="preserve">
+    <value> CT 06033</value>
+  </data>
+  <data name="Prince St." xml:space="preserve">
+    <value> GA 31525</value>
+  </data>
+  <data name="Princess Lane" xml:space="preserve">
+    <value> WA 98290</value>
+  </data>
+  <data name="Princeton Ave." xml:space="preserve">
+    <value> CT 06851</value>
+  </data>
+  <data name="Prospect Street" xml:space="preserve">
+    <value> FL 32714</value>
+  </data>
+  <data name="Pulaski Dr." xml:space="preserve">
+    <value> NY 10002</value>
+  </data>
+  <data name="Pulaski Street" xml:space="preserve">
+    <value> NJ 08648</value>
+  </data>
+  <data name="Purple Finch Road" xml:space="preserve">
+    <value> FL 33771</value>
+  </data>
+  <data name="Ramblewood Ave." xml:space="preserve">
+    <value> IL 60030</value>
+  </data>
+  <data name="Randall Mill Road" xml:space="preserve">
+    <value> IN 46140</value>
+  </data>
+  <data name="Redwood Ave." xml:space="preserve">
+    <value> GA 30269</value>
+  </data>
+  <data name="Ridgeview Drive" xml:space="preserve">
+    <value> NJ 07011</value>
+  </data>
+  <data name="River St." xml:space="preserve">
+    <value> OH 44146</value>
+  </data>
+  <data name="River St.1" xml:space="preserve">
+    <value> MA 01880</value>
+  </data>
+  <data name="Riverview Avenue" xml:space="preserve">
+    <value> NY 11361</value>
+  </data>
+  <data name="Roberts Lane" xml:space="preserve">
+    <value> PA 19020</value>
+  </data>
+  <data name="Rockland Street" xml:space="preserve">
+    <value> FL 32082</value>
+  </data>
+  <data name="Rockledge Street" xml:space="preserve">
+    <value> NY 14701</value>
+  </data>
+  <data name="Rockwell Ave." xml:space="preserve">
+    <value> OH 44203</value>
+  </data>
+  <data name="Rocky River Lane" xml:space="preserve">
+    <value> MI 48035</value>
+  </data>
+  <data name="Roehampton Dr." xml:space="preserve">
+    <value> FL 33470</value>
+  </data>
+  <data name="Rosewood Dr." xml:space="preserve">
+    <value> IN 47802</value>
+  </data>
+  <data name="S. Andover Ave." xml:space="preserve">
+    <value> PA 17013</value>
+  </data>
+  <data name="S. Beech Road" xml:space="preserve">
+    <value> NY 12401</value>
+  </data>
+  <data name="S. Birchpond St." xml:space="preserve">
+    <value> NY 14304</value>
+  </data>
+  <data name="S. Bridge Road" xml:space="preserve">
+    <value> TN 37421</value>
+  </data>
+  <data name="S. Bridgeton Ave." xml:space="preserve">
+    <value> AZ 85365</value>
+  </data>
+  <data name="S. Cedarwood St." xml:space="preserve">
+    <value> AL 36526</value>
+  </data>
+  <data name="S. Evergreen Dr." xml:space="preserve">
+    <value> NY 11787</value>
+  </data>
+  <data name="S. Garfield Street" xml:space="preserve">
+    <value> IN 46514</value>
+  </data>
+  <data name="S. Princess Lane" xml:space="preserve">
+    <value> CA 92220</value>
+  </data>
+  <data name="S. River Ave." xml:space="preserve">
+    <value> MI 48066</value>
+  </data>
+  <data name="S. South Court" xml:space="preserve">
+    <value> VA 24012</value>
+  </data>
+  <data name="S. Southampton St." xml:space="preserve">
+    <value> NC 28655</value>
+  </data>
+  <data name="S. Spruce Ave." xml:space="preserve">
+    <value> GA 30236</value>
+  </data>
+  <data name="S. Virginia St." xml:space="preserve">
+    <value> MA 02760</value>
+  </data>
+  <data name="Sage Court" xml:space="preserve">
+    <value> OH 43035</value>
+  </data>
+  <data name="San Carlos Avenue" xml:space="preserve">
+    <value> MA 01851</value>
+  </data>
+  <data name="San Juan St." xml:space="preserve">
+    <value> NY 11967</value>
+  </data>
+  <data name="San Pablo Lane" xml:space="preserve">
+    <value> CO 80003</value>
+  </data>
+  <data name="Santa Clara Circle" xml:space="preserve">
+    <value> IL 60115</value>
+  </data>
+  <data name="School Ave." xml:space="preserve">
+    <value> PA 19355</value>
+  </data>
+  <data name="Schoolhouse Lane" xml:space="preserve">
+    <value> MI 48124</value>
+  </data>
+  <data name="SE. Annadale St." xml:space="preserve">
+    <value> RI 02904</value>
+  </data>
+  <data name="Sherman Ave." xml:space="preserve">
+    <value> MD 20854</value>
+  </data>
+  <data name="Sherwood Dr." xml:space="preserve">
+    <value> IL 60053</value>
+  </data>
+  <data name="Shipley St." xml:space="preserve">
+    <value> MS 38654</value>
+  </data>
+  <data name="Shipley Street" xml:space="preserve">
+    <value> IN 47302</value>
+  </data>
+  <data name="Shub Farm Street" xml:space="preserve">
+    <value> NY 10573</value>
+  </data>
+  <data name="Shub Farm Street1" xml:space="preserve">
+    <value> MI 49015</value>
+  </data>
+  <data name="Shub Farm Street2" xml:space="preserve">
+    <value> NC 28358</value>
+  </data>
+  <data name="Sleepy Hollow St." xml:space="preserve">
+    <value> NJ 08865</value>
+  </data>
+  <data name="Sleepy Hollow Street" xml:space="preserve">
+    <value> NY 14043</value>
+  </data>
+  <data name="Smith Court" xml:space="preserve">
+    <value> AL 36067</value>
+  </data>
+  <data name="Smith Dr." xml:space="preserve">
+    <value> MD 21044</value>
+  </data>
+  <data name="Smith Rd." xml:space="preserve">
+    <value> TN 37918</value>
+  </data>
+  <data name="Smith Store St." xml:space="preserve">
+    <value> NJ 07087</value>
+  </data>
+  <data name="Smoky Hollow St." xml:space="preserve">
+    <value> NY 11520</value>
+  </data>
+  <data name="Smoky Hollow Street" xml:space="preserve">
+    <value> CT 06511</value>
+  </data>
+  <data name="Snake Hill Avenue" xml:space="preserve">
+    <value> FL 33028</value>
+  </data>
+  <data name="South 2nd St." xml:space="preserve">
+    <value> MD 21208</value>
+  </data>
+  <data name="South Beech Street" xml:space="preserve">
+    <value> NJ 07740</value>
+  </data>
+  <data name="South Garden St." xml:space="preserve">
+    <value> MD 20744</value>
+  </data>
+  <data name="South Lawrence Drive" xml:space="preserve">
+    <value> GA 30223</value>
+  </data>
+  <data name="South Newbridge St." xml:space="preserve">
+    <value> FL 33009</value>
+  </data>
+  <data name="South Peachtree St." xml:space="preserve">
+    <value> NY 11102</value>
+  </data>
+  <data name="South Ryan Street" xml:space="preserve">
+    <value> NY 12866</value>
+  </data>
+  <data name="South Shadow Brook Street" xml:space="preserve">
+    <value> FL 32779</value>
+  </data>
+  <data name="South Stonybrook Street" xml:space="preserve">
+    <value> AL 36532</value>
+  </data>
+  <data name="St Margarets Street" xml:space="preserve">
+    <value> CT 06074</value>
+  </data>
+  <data name="Strawberry Dr." xml:space="preserve">
+    <value> TX 75115</value>
+  </data>
+  <data name="Strawberry Drive" xml:space="preserve">
+    <value> NC 28031</value>
+  </data>
+  <data name="Sulphur Springs Street" xml:space="preserve">
+    <value> NH 03054</value>
+  </data>
+  <data name="Summit Street" xml:space="preserve">
+    <value> VA 22191</value>
+  </data>
+  <data name="Sunbeam St." xml:space="preserve">
+    <value> PA 15401</value>
+  </data>
+  <data name="Sunnyslope Lane" xml:space="preserve">
+    <value> IN 46321</value>
+  </data>
+  <data name="Sunnyslope Road" xml:space="preserve">
+    <value> FL 32806</value>
+  </data>
+  <data name="Surrey Dr." xml:space="preserve">
+    <value> NJ 07109</value>
+  </data>
+  <data name="Sussex Drive" xml:space="preserve">
+    <value> IL 60462</value>
+  </data>
+  <data name="Tailwater St." xml:space="preserve">
+    <value> MA 02132</value>
+  </data>
+  <data name="Theatre Ave." xml:space="preserve">
+    <value> MN 55303</value>
+  </data>
+  <data name="Theatre Street" xml:space="preserve">
+    <value> NY 12010</value>
+  </data>
+  <data name="Third Lane" xml:space="preserve">
+    <value> MA 02038</value>
+  </data>
+  <data name="Third St." xml:space="preserve">
+    <value> IA 50158</value>
+  </data>
+  <data name="Thomas Rd." xml:space="preserve">
+    <value> IL 60010</value>
+  </data>
+  <data name="Thompson St." xml:space="preserve">
+    <value> IL 60435</value>
+  </data>
+  <data name="Thorne Road" xml:space="preserve">
+    <value> PA 18064</value>
+  </data>
+  <data name="Tower Rd." xml:space="preserve">
+    <value> NJ 08873</value>
+  </data>
+  <data name="Trenton Dr." xml:space="preserve">
+    <value> GA 30096</value>
+  </data>
+  <data name="Trenton Drive" xml:space="preserve">
+    <value> IL 60047</value>
+  </data>
+  <data name="Trenton Drive1" xml:space="preserve">
+    <value> GA 30721</value>
+  </data>
+  <data name="Union Ave." xml:space="preserve">
+    <value> GA 31904</value>
+  </data>
+  <data name="Vale St." xml:space="preserve">
+    <value> MA 02169</value>
+  </data>
+  <data name="Valley Farms St." xml:space="preserve">
+    <value> CT 06410</value>
+  </data>
+  <data name="Vernon Lane" xml:space="preserve">
+    <value> IL 60110</value>
+  </data>
+  <data name="Vernon Lane1" xml:space="preserve">
+    <value> NY 10952</value>
+  </data>
+  <data name="W. Armstrong St." xml:space="preserve">
+    <value> IL 60440</value>
+  </data>
+  <data name="W. Bedford Lane" xml:space="preserve">
+    <value> SC 29550</value>
+  </data>
+  <data name="W. Buttonwood St." xml:space="preserve">
+    <value> CA 91387</value>
+  </data>
+  <data name="W. Fieldstone Dr." xml:space="preserve">
+    <value> MD 21801</value>
+  </data>
+  <data name="W. Franklin Lane" xml:space="preserve">
+    <value> AL 36330</value>
+  </data>
+  <data name="W. Gonzales Street" xml:space="preserve">
+    <value> WV 26508</value>
+  </data>
+  <data name="W. Grant St." xml:space="preserve">
+    <value> IL 60004</value>
+  </data>
+  <data name="W. Green Lake Ave." xml:space="preserve">
+    <value> TX 75043</value>
+  </data>
+  <data name="W. Highland Street" xml:space="preserve">
+    <value> OH 44004</value>
+  </data>
+  <data name="W. Lantern Ave." xml:space="preserve">
+    <value> NY 11378</value>
+  </data>
+  <data name="W. Marsh Circle" xml:space="preserve">
+    <value> CA 95301</value>
+  </data>
+  <data name="W. Newcastle Street" xml:space="preserve">
+    <value> FL 33056</value>
+  </data>
+  <data name="W. River Street" xml:space="preserve">
+    <value> PA 17109</value>
+  </data>
+  <data name="W. Roehampton Circle" xml:space="preserve">
+    <value> CT 06492</value>
+  </data>
+  <data name="W. Spruce Ave." xml:space="preserve">
+    <value> FL 32127</value>
+  </data>
+  <data name="W. Swanson Rd." xml:space="preserve">
+    <value> PA 19464</value>
+  </data>
+  <data name="Wagon St." xml:space="preserve">
+    <value> WI 53590</value>
+  </data>
+  <data name="Wakehurst Street" xml:space="preserve">
+    <value> WI 53154</value>
+  </data>
+  <data name="Walnut Street" xml:space="preserve">
+    <value> AL 35007</value>
+  </data>
+  <data name="Walt Whitman St." xml:space="preserve">
+    <value> SC 29841</value>
+  </data>
+  <data name="Warren Ave." xml:space="preserve">
+    <value> WV 26101</value>
+  </data>
+  <data name="Washington Street" xml:space="preserve">
+    <value> TN 37643</value>
+  </data>
+  <data name="Wellington Dr." xml:space="preserve">
+    <value> NJ 08021</value>
+  </data>
+  <data name="West Clay Ave." xml:space="preserve">
+    <value> MA 02072</value>
+  </data>
+  <data name="West Columbia Dr." xml:space="preserve">
+    <value> NY 13021</value>
+  </data>
+  <data name="West Court" xml:space="preserve">
+    <value> IN 47401</value>
+  </data>
+  <data name="West Edgefield Dr." xml:space="preserve">
+    <value> WI 54729</value>
+  </data>
+  <data name="West Foxrun St." xml:space="preserve">
+    <value> MD 21234</value>
+  </data>
+  <data name="West Harrison St." xml:space="preserve">
+    <value> TN 37659</value>
+  </data>
+  <data name="West Lane" xml:space="preserve">
+    <value> NC 28079</value>
+  </data>
+  <data name="West Miller Ave." xml:space="preserve">
+    <value> MA 01801</value>
+  </data>
+  <data name="West Park Rd." xml:space="preserve">
+    <value> NC 27603</value>
+  </data>
+  <data name="West Pleasant Lane" xml:space="preserve">
+    <value> GA 30281</value>
+  </data>
+  <data name="West Proctor Court" xml:space="preserve">
+    <value> FL 32533</value>
+  </data>
+  <data name="West Shore Lane" xml:space="preserve">
+    <value> OH 45324</value>
+  </data>
+  <data name="West Stonybrook Rd." xml:space="preserve">
+    <value> MA 02149</value>
+  </data>
+  <data name="Westminster Circle" xml:space="preserve">
+    <value> MA 01201</value>
+  </data>
+  <data name="Westminster Lane" xml:space="preserve">
+    <value> IA 50023</value>
+  </data>
+  <data name="Westport St." xml:space="preserve">
+    <value> NJ 08527</value>
+  </data>
+  <data name="White St." xml:space="preserve">
+    <value> IN 46123</value>
+  </data>
+  <data name="Whitemarsh Lane" xml:space="preserve">
+    <value> MN 55379</value>
+  </data>
+  <data name="Wild Horse Dr." xml:space="preserve">
+    <value> IA 50010</value>
+  </data>
+  <data name="Wild Horse Lane" xml:space="preserve">
+    <value> MI 49423</value>
+  </data>
+  <data name="Wild Horse Street" xml:space="preserve">
+    <value> MD 21740</value>
+  </data>
+  <data name="Wild Rose Ave." xml:space="preserve">
+    <value> WI 54220</value>
+  </data>
+  <data name="William Ave." xml:space="preserve">
+    <value> OH 45066</value>
+  </data>
+  <data name="William St." xml:space="preserve">
+    <value> MD 20747</value>
+  </data>
+  <data name="Williams Drive" xml:space="preserve">
+    <value> NY 14850</value>
+  </data>
+  <data name="Windfall Dr." xml:space="preserve">
+    <value> VA 23803</value>
+  </data>
+  <data name="Windfall St." xml:space="preserve">
+    <value> WV 26301</value>
+  </data>
+  <data name="Winding Way Drive" xml:space="preserve">
+    <value> SC 29501</value>
+  </data>
+  <data name="Wood St." xml:space="preserve">
+    <value> IA 50322</value>
+  </data>
+  <data name="Woodsman St." xml:space="preserve">
+    <value> MD 21114</value>
+  </data>
+  <data name="Wrangler St." xml:space="preserve">
+    <value> SC 29803</value>
+  </data>
+  <data name="Wrangler St.1" xml:space="preserve">
+    <value> NY 11552</value>
+  </data>
+  <data name="York St." xml:space="preserve">
+    <value> PA 18102</value>
+  </data>
+  <data name="Young Ave." xml:space="preserve">
+    <value> VA 23834</value>
+  </data>
+  <data name="Young St." xml:space="preserve">
+    <value> ME 04240</value>
+  </data>
+  <data name="Young St.1" xml:space="preserve">
+    <value> PA 19320</value>
+  </data>
+  <data name="Yukon St." xml:space="preserve">
+    <value> MD 20743</value>
+  </data>
+</root>

@@ -1,4 +1,5 @@
 using LuNoSqlAssignment;
+using LuNoSqlAssignment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager? configuration = builder.Configuration;
@@ -11,6 +12,8 @@ builder.Services.AddStackExchangeRedisCache(options =>
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: builder.Configuration["CacheConnection"].ToString()));
+builder.Services.AddTransient<IFileHandling, FileHandling>();
+builder.Services.AddTransient<IPersonsFileAccess, PersonsFileAccess>();
 
 var app = builder.Build();
 
@@ -21,7 +24,6 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
 // Register services here 
 
 app.UseHttpsRedirection();
