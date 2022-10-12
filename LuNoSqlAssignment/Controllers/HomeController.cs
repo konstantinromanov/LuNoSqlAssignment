@@ -119,7 +119,6 @@ namespace LuNoSqlAssignment.Controllers
                         persons[i].Address.City = (string?)item.Key;
                         persons[i++].Address.PostalCode = (string?)item.Value;
                     }
-
                 }
             }
 
