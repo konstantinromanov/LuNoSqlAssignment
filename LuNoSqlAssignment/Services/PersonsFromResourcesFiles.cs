@@ -10,7 +10,7 @@ namespace LuNoSqlAssignment.Services
     public class PersonsFromResourcesFiles
     {
 
-        public IList<Person> Read()
+        public static IList<Person> Read()
         {
             List<Person> persons = new List<Person>();
 

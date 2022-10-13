@@ -4575,14 +4575,5 @@ namespace LuNoSqlAssignment.Resources {
                 return ResourceManager.GetString("Zachery", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hardin.
-        /// </summary>
-        public static string Zion {
-            get {
-                return ResourceManager.GetString("Zion", resourceCulture);
-            }
-        }
     }
 }

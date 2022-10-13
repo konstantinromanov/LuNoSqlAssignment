@@ -12,12 +12,12 @@ namespace LuNoSqlAssignment.Services
             _fileHandling = fileHandling;
         }
 
-        public void SavePersons(IList<Person> persons, string fileNameWrite)
+        public void SavePersons(IList<Person> persons, string fileNameWrite, string path = "")
         {
             string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string jsonPersonsToFile = JsonConvert.SerializeObject(persons, Formatting.None);
 
-            _fileHandling.Directory = docPath;
+            _fileHandling.Directory = path == "" ? docPath : path;
             _fileHandling.WriteToDisk(fileNameWrite, jsonPersonsToFile);
         }
 
