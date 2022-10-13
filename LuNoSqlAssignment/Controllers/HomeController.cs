@@ -123,9 +123,21 @@ namespace LuNoSqlAssignment.Controllers
 
             var jsper = JsonSerializer.Serialize(persons[5]);
             bool setPerson2 = await _redisConnection.BasicRetryAsync(async (db) => await db.SetAddAsync("ppl", JsonSerializer.Serialize(persons[5])));
-
+            //var getPersonJsn = await _redisConnection.BasicRetryAsync(async (db) => await db.gets
             var getPerson2 = await _redisConnection.BasicRetryAsync(async (db) => await db.SetRemoveAsync("ppl", jsper));
 
+
+            bool setPersonString = await _redisConnection.BasicRetryAsync(async (db) => await db.StringSetAsync("person:999", JsonSerializer.Serialize(persons[5])));
+
+            var getPersonString = (await _redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync("person:999"))).ToString();
+
+            Person? per = JsonSerializer.Deserialize<Person?>(getPersonString);
+
+            var setJsonPersons = await setAllPersonsToCacheAsJsonValues(persons, _redisConnection);
+
+            var getMultPersons = await getAllPersonsFromCacheAsJsonValues(_redisConnection, 3);
+
+            var test = "";
             //var getPerson244 = (Task<bool>)_redisConnection.BasicRetryAsync<bool>(transaction);
 
             //var getPerson245 = (Task<bool>)_redisConnection.BasicRetryAsync<bool>(transaction);
@@ -154,12 +166,12 @@ namespace LuNoSqlAssignment.Controllers
 
             //persons[0].Name = "Kostja";
 
-            bool created = createPersonsCache(persons, _redisConnection);
-            
-            var myGetPerson = await _redisConnection.BasicRetryAsync(async (db) => await db.HashGetAllAsync("persons:499"));
+            bool created = await createPersonsCache(persons, _redisConnection);
+            //var keys = new RedisKey[] { "persons:0", "persons:1" };
+
+            //var myGetPerson = await _redisConnection.BasicRetryAsync(async (db) => await db.HashGetAllAsync(keys));
 
             var myGetPersonMatch = await _redisConnection.BasicRetryAsync((db) => Task.FromResult(db.HashScanAsync("persons", "na*")));
-
 
 
 
@@ -167,77 +179,136 @@ namespace LuNoSqlAssignment.Controllers
         }
 
 
-        private bool createPersonsCache(IList<Person> persons, RedisConnection? redisConnection)
+        private async Task<bool> createPersonsCache(IList<Person> persons, RedisConnection? redisConnection)
         {
-
             if (redisConnection == null)
             {
                 return false;
             }
 
-            var setPersons = (Task<bool>)redisConnection.BasicRetryAsync<bool>(transaction);
-            
+            bool setPersons = await (Task<bool>)redisConnection.BasicRetryAsync<bool>(transaction);
+
+            if (!setPersons)
+            {
+                return false;
+            }
+
             async Task<bool> transaction(IDatabase db)
             {
-                var tran = db.CreateTransaction();
-                var tasks = new List<Task>();               
+                var transactions = db.CreateTransaction();
+                var tasks = new List<Task>();
 
                 for (int i = 0; i < persons.Count; i++)
                 {
                     Person currentPerson = persons[i];
 
-                    tasks.Add((Task)tran.HashSetAsync($"persons:{i}", new HashEntry[] { new HashEntry("name", currentPerson.Name), new HashEntry("surname", currentPerson.Surname), new HashEntry("house", currentPerson.Address.HouseNumber), new HashEntry("street", currentPerson.Address.Street), new HashEntry("city", currentPerson.Address.City), new HashEntry("zip", currentPerson.Address.PostalCode) }));
+                    //tasks.Add((Task)transactions.HashSetAsync($"persons:{i}", new HashEntry[] { new HashEntry("name", currentPerson.Name), new HashEntry("surname", currentPerson.Surname), new HashEntry("house", currentPerson.Address.HouseNumber), new HashEntry("street", currentPerson.Address.Street), new HashEntry("city", currentPerson.Address.City), new HashEntry("zip", currentPerson.Address.PostalCode) }));
 
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "name"));
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "surname"));
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "house"));
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "street"));
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "city"));
-                    //tasks.Add((Task)tran.HashDeleteAsync($"persons:{i}", "zip"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "name"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "surname"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "house"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "street"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "city"));
+                    tasks.Add((Task)transactions.HashDeleteAsync($"persons:{i}", "zip"));
 
-                    //tasks.Add((Task)tran.KeyDeleteAsync($"persons:{i}"));
+                    tasks.Add((Task)transactions.KeyDeleteAsync($"persons:{i}"));
                 }
 
-               // tasks.Add((Task)tran.KeyDeleteAsync("persons:0"));
+                var committed = await transactions.ExecuteAsync();
 
-                var committed = await tran.ExecuteAsync();
-
-                if (committed)
+                if (!committed)
                 {
-                    for (int i = 0; i < persons.Count; i++)
-                    {
-                        await tasks[i];
-                    }
+                    return false;
                 }
 
-                return committed;
+                for (int i = 0; i < persons.Count; i++)
+                {
+                    await tasks[i];
+                }
+
+                return true;
             }
 
             return true;
         }
-        //private async Task<bool> transaction(IDatabase db)
-        //{            
-        //    var tran = db.CreateTransaction();
-        //    var tasks = new List<Task>();           
-        //    var names = new string[] { "Vasja2", "Vladimir2" };
 
-        //    for (int i = 0; i < names.Length; i++)
-        //    {
-        //        var currPerson = $"personss:{i}";
-        //        tasks.Add((Task)tran.HashSetAsync(currPerson, new HashEntry[] { new HashEntry("name", names[i]) }));
-        //    }
+        private async Task<bool> setAllPersonsToCacheAsJsonValues(IList<Person> persons, RedisConnection? redisConnection)
+        {
+            int count = 3;
 
-        //    var committed = await tran.ExecuteAsync();
+            bool setPersons = await (Task<bool>)redisConnection.BasicRetryAsync<bool>(transaction);
 
-        //    if (committed)
-        //    {
-        //        for (int i = 0; i < names.Length; i++)
-        //        {
-        //            await tasks[i];
-        //        }               
-        //    }
+            if (!setPersons)
+            {
+                return false;
+            }
 
-        //    return committed;
-        //}
+            async Task<bool> transaction(IDatabase db)
+            {
+                var transactions = db.CreateTransaction();
+                var tasks = new List<Task>();
+
+                for (int i = 0; i < count; i++)
+                {
+                    Person currentPerson = persons[i];
+
+                    tasks.Add(transactions.StringSetAsync($"person:{i}", JsonSerializer.Serialize(persons[i])));
+                }
+
+                var committed = await transactions.ExecuteAsync();
+
+                if (!committed)
+                {
+                    return false;
+                }
+
+                for (int i = 0; i < count; i++)
+                {
+                    await tasks[i];
+                }
+
+                return true;
+            }
+
+            return true;
+        }
+
+        private async Task<IList<Person>?> getAllPersonsFromCacheAsJsonValues(RedisConnection? redisConnection, int count)
+        {            
+            var getPersons = await (Task<IList<Person>>)redisConnection.BasicRetryAsync<IList<Person>>(transaction);
+
+            async Task<IList<Person>> transaction(IDatabase db)
+            {
+                var transactions = db.CreateTransaction();
+                var tasks = new List<Task<RedisValue>>();                
+
+                for (int i = 0; i < count; i++)
+                {
+                    tasks.Add(transactions.StringGetAsync($"person:{i}"));
+                }
+
+                var committed = await transactions.ExecuteAsync();
+
+                if (!committed)
+                {
+                    return null;
+                }
+
+                IList<Person?> persons = new List<Person>();
+
+                for (int i = 0; i < count; i++)
+                {
+                    var person = (await tasks[i]);
+
+                    var tt = person.ToString();
+
+                    persons.Add(JsonSerializer.Deserialize<Person>(tt));
+                }
+
+                return persons;
+            }
+
+            return getPersons;
+        }
     }
 }
