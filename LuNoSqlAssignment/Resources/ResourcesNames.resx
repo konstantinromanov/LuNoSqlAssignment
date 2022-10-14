@@ -1359,10 +1359,6 @@
   <data name="Rene1" xml:space="preserve">
     <value>Stark</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ResourcesAddresses" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ResourcesAddresses.resx;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
-  </data>
   <data name="Rex" xml:space="preserve">
     <value>Vazquez</value>
   </data>
@@ -1617,5 +1613,8 @@
   </data>
   <data name="Zachery" xml:space="preserve">
     <value>Roberts</value>
+  </data>
+  <data name="Zion" xml:space="preserve">
+    <value>Hardin</value>
   </data>
 </root>

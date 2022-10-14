@@ -14,6 +14,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton(async x => await RedisConnection.InitializeAsync(connectionString: builder.Configuration["CacheConnection"].ToString()));
 builder.Services.AddTransient<IFileHandling, FileHandling>();
 builder.Services.AddTransient<IPersonsFileAccess, PersonsFileAccess>();
+builder.Services.AddTransient<ICacheService, CacheService>();
 
 var app = builder.Build();
 

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<LuNoSqlAssignment.Models.Person>
+
+@{
+    ViewData["Title"] = "Fife Hundred";
+}
+
+<h1>Fife hundred from Redis cache</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address.HouseNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address.Street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address.PostalCode)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.HouseNumber)
+                </td>
+                <td>
+                   @Html.DisplayFor(modelItem => item.Address.Street)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address.PostalCode)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
