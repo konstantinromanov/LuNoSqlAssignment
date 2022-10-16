@@ -3,6 +3,30 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Konstantīna Romanova 1. mājas darbs.</h1>
+    <p>Darbs izstrādāts izmantojot .NET6 tehnoloģiju un Redis.</p>
+</div>
+<div class="text-left">
+    <p>Funkcionalitātes  apraksts:</p>
+    <ul>
+        <li>
+            “Set 500 to cache” opcija lasa datus no .txt faila, kas atrodas aplikācijas root direktorijā, izveido cache un rada rezultātu tabulas formā.
+        </li>
+        <li>
+            “All from cache” opcija lasa datus un rada rezultātu tabulas formā.
+        </li>
+        <li>
+            “15 from cache” opcija atlasa pirmos 15 ierakstus no cache un rada rezultātu tabulas formā.
+        </li>
+        <li>
+            “Change 11 in cache” opcija maina pirmajos 11 ierakstos adreses uz Latvijas adresēm (ielas nosaukums tiem tiek izveidots vienāds – Brīvibas iela, lai nesarežģītu uzdevumu) un rada rezultātu tabulas formā.
+        </li>
+        <li>
+            “Pop 150 entries” dzēš 150 pēdējos ierakstus no cache un rada rezultātu tabulas formā.
+        </li>
+        <li>
+            “Flush cache” dzēš visus ierakstus no cache.
+        </li>
+    </ul>
+    <p>Ja cache tika izdzēsts jāizveido jaunu izmantojot pirmo opciju atkal.</p>
 </div>

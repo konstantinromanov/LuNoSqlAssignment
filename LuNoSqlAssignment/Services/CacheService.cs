@@ -23,8 +23,8 @@ namespace LuNoSqlAssignment.Services
 
             async Task<bool> transaction(IDatabase db)
             {
-                var transactions = db.CreateTransaction();
-                var tasks = new List<Task>();
+                ITransaction? transactions = db.CreateTransaction();
+                List<Task>? tasks = new List<Task>();
 
                 for (int i = 0; i < persons.Count; i++)
                 {
@@ -32,7 +32,7 @@ namespace LuNoSqlAssignment.Services
                     tasks.Add(transactions.StringSetAsync($"person:{i}", JsonSerializer.Serialize(persons[i])));
                 }
 
-                var committed = await transactions.ExecuteAsync();
+                bool committed = await transactions.ExecuteAsync();
 
                 if (!committed)
                 {
@@ -45,7 +45,7 @@ namespace LuNoSqlAssignment.Services
                 }
 
                 bool counter = (await redisConnection.BasicRetryAsync(async (db) => await db.StringSetAsync("personsNumber", persons.Count.ToString())));
-                int count = Int32.Parse((await redisConnection.BasicRetryAsync(async (db) => await db.StringGetAsync("personsNumber"))).ToString());
+                
                 return true;
             }
 
@@ -60,15 +60,15 @@ namespace LuNoSqlAssignment.Services
 
             async Task<IList<Person>> transaction(IDatabase db)
             {
-                var transactions = db.CreateTransaction();
-                var tasks = new List<Task<RedisValue>>();
+                ITransaction? transactions = db.CreateTransaction();
+                List<Task<RedisValue>>? tasks = new List<Task<RedisValue>>();
 
                 for (int i = 0; i < count; i++)
                 {
                     tasks.Add(transactions.StringGetAsync($"person:{i}"));
                 }
 
-                var committed = await transactions.ExecuteAsync();
+                bool committed = await transactions.ExecuteAsync();
 
                 if (!committed)
                 {
@@ -98,8 +98,8 @@ namespace LuNoSqlAssignment.Services
 
             async Task<bool> transaction(IDatabase db)
             {
-                var transactions = db.CreateTransaction();
-                var tasks = new List<Task<bool>>();
+                ITransaction? transactions = db.CreateTransaction();
+                List<Task<bool>>? tasks = new List<Task<bool>>();
 
                 for (int i = 0; i < numberToPop; i++)
                 {
@@ -107,7 +107,7 @@ namespace LuNoSqlAssignment.Services
                     tasks.Add(transactions.KeyDeleteAsync($"person:{indexToDelete}"));
                 }
 
-                var committed = await transactions.ExecuteAsync();
+                bool committed = await transactions.ExecuteAsync();
 
                 if (!committed)
                 {
@@ -161,6 +161,7 @@ namespace LuNoSqlAssignment.Services
             return persons;
         }
 
+        // This method is not being used, it was created to show another approach to store object as hash (commented out code is for storing, left one is for deletion).
         public async Task<bool> CreatePersonsCache(IList<Person> persons, RedisConnection? redisConnection)
         {
             if (redisConnection == null)
@@ -177,8 +178,8 @@ namespace LuNoSqlAssignment.Services
 
             async Task<bool> transaction(IDatabase db)
             {
-                var transactions = db.CreateTransaction();
-                var tasks = new List<Task>();
+                ITransaction? transactions = db.CreateTransaction();
+                List<Task>? tasks = new List<Task>();
 
                 for (int i = 0; i < persons.Count; i++)
                 {
@@ -196,7 +197,7 @@ namespace LuNoSqlAssignment.Services
                     tasks.Add((Task)transactions.KeyDeleteAsync($"persons:{i}"));
                 }
 
-                var committed = await transactions.ExecuteAsync();
+                bool committed = await transactions.ExecuteAsync();
 
                 if (!committed)
                 {

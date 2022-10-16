@@ -56,6 +56,8 @@ namespace LuNoSqlAssignment.Controllers
         public async Task<IActionResult> SetFifeHudredToCache()
         {
             _redisConnection = await _redisConnectionFactory;
+
+            // This code is for creating .txt file in Json format from the resources files with persons data.
             //var personsFromResources = PersonsFromResourcesFiles.Read();
             //_personsFileAccess.SavePersons(personsFromResources, "persons.txt", _env.WebRootPath);
 
